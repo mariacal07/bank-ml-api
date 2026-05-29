@@ -62,7 +62,8 @@ bank-ml-api/
     raw/            # Dataset original, no versionado
   notebooks/        # Exploracion, EDA y experimentos
   scripts/          # Scripts reproducibles, como entrenamiento
-  requirements.txt  # Dependencias del proyecto
+  requirements.txt      # Dependencias base del proyecto
+  requirements-dev.txt  # Dependencias para desarrollo y notebooks
 ```
 
 ## Uso de notebooks
@@ -95,10 +96,17 @@ En Windows PowerShell:
 venv\Scripts\Activate.ps1
 ```
 
-Instala dependencias:
+Instala las dependencias base del proyecto:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Si vas a trabajar con notebooks, visualizaciones o descarga desde Kaggle, instala
+tambien las dependencias de desarrollo:
+
+```bash
+pip install -r requirements-dev.txt
 ```
 
 ## Flujo de trabajo con Git
